@@ -4,8 +4,15 @@ import Ejercicio4.Vehiculo;
 
 import java.text.ParseException;
 
+/**
+ * metodo main por donde inical el proyecto
+ * @author Jhon Gutierrez
+ */
 public class Main {
     public static void main (String [ ] args) throws ParseException {
+        /**
+         * se crea una instancia del ejercicio 4 y se llama la funcinalidad que resuleve el ejercicio
+         */
         Vehiculo vehiculo = new Vehiculo();
         vehiculo.crearVehiculo();
     }

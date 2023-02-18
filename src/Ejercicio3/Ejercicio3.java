@@ -1,12 +1,28 @@
 package Ejercicio3;
 import java.util.Scanner;
 
+/**
+ * clase que contiene distintas funcionalidades y contiene un arreglo de numeros tipo double
+ * @author Jhon Gutierrez
+ */
 public class Ejercicio3 {
-
+    /**
+     * se creo para guardar una serie de numeros aleatorios
+     */
  private double [] numeros;
+
+    /**
+     * metodo constructor
+     */
     public Ejercicio3() {
         super();
     }
+
+    /**
+     * funcionalidad que genera numeros aleatorios
+     * @param tamanioArray
+     * @return
+     */
     public double[] generarArrayNumeros(int tamanioArray){
        numeros = new double[tamanioArray];
         for (int i =0; i < numeros.length;i++){
@@ -18,6 +34,12 @@ public class Ejercicio3 {
         }
         return numeros;
     }
+
+    /**
+     * funcionalidad que ordena el array de numeros por el metodo burbuja
+     * @param A
+     * @return
+     */
     public double [] burbuja(double[] A) {
          int i, j;
          double aux;
@@ -32,6 +54,14 @@ public class Ejercicio3 {
         }
         return A;
     }
+
+    /**
+     * funcionalidad que irdena el array de numeros por el meotodo quicksort
+     * @param A
+     * @param izq
+     * @param der
+     * @return
+     */
     public double[] quicksort(double A[], int izq, int der) {
         double pivote=A[izq];
         int i=izq;
@@ -56,6 +86,10 @@ public class Ejercicio3 {
         return A;
     }
 
+    /**
+     * funcionalidad que permite elegir el tamaño del arreglo y por que metodo lo desea ordenar
+     * todo por consola
+     */
     public  void usuario(){
         Scanner sc = new Scanner(System.in);
         int response = 0;

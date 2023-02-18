@@ -1,19 +1,45 @@
 package Ejercicio4;
-
 import Ejercicio5.*;
-
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.Scanner;
 
+/**
+ * clase vehiculo que posee multiples subclases
+ * @author Jhon Gutierrez
+ */
 public class Vehiculo {
+    /**
+     * numero de pasajeros
+     */
     private  int numeroPasajeros;
+    /**
+     * atributo que indidica si posee tripulacion o no
+     */
      private String tripulacion;
-     private  int numeroRuedas;
+    /**
+     * indica el numero de ruedas
+     */
+    private  int numeroRuedas;
+    /**
+     * indica la fecha de matricula
+     */
      private Date fechaMatricula;
-     private String medioDesplazamientos;
+    /**
+     * indica el medio de desplazamiento
+     */
+    private String medioDesplazamientos;
+
+    /**
+     * metodo constructor
+     * @param numeroPasajeros
+     * @param tripulacion
+     * @param numeroRuedas
+     * @param fechaMatricula
+     * @param medioDesplazamientos
+     */
     public Vehiculo(int numeroPasajeros, String tripulacion, int numeroRuedas, Date fechaMatricula, String medioDesplazamientos) {
         this.numeroPasajeros = numeroPasajeros;
         this.tripulacion = tripulacion;
@@ -22,9 +48,18 @@ public class Vehiculo {
         this.medioDesplazamientos = medioDesplazamientos;
 
     }
+
+    /**
+     * sobre carga de metodo construcutor
+     */
     public Vehiculo(){
 
     }
+
+    /**
+     * funcinalidad que permite crear un vehiculo ingresando los valores por consola
+     * @throws ParseException
+     */
     public void crearVehiculo() throws ParseException {
         Scanner sc = new Scanner(System.in);
         ArrayList<Vehiculo> vehiculos = new ArrayList<>();
@@ -50,6 +85,12 @@ public class Vehiculo {
         }
 
     }
+
+    /**
+     * funcionalidad que permite crear cualquier tipo de vehicula  ingresando los datos por consola
+     * hace parte del ejercicio 5
+     * @throws ParseException
+     */
 
     public void crearDistintosTiposDeVehiculo() throws ParseException {
         ArrayList<Vehiculo> vehiculos = new ArrayList<>();
@@ -160,34 +201,68 @@ public class Vehiculo {
             System.out.println(vehiculos.get(j).toString());
         }
     }
+
+    /**
+     *
+     * @return
+     */
     public int getNumeroPasajeros() {
         return numeroPasajeros;
     }
+
+    /**
+     *
+     * @param numeroPasajeros
+     */
 
     public void setNumeroPasajeros(int numeroPasajeros) {
         this.numeroPasajeros = numeroPasajeros;
     }
 
+    /**
+     *
+     * @return
+     */
     public String getTripulacion() {
         return tripulacion;
     }
 
+    /**
+     *
+     * @param tripulacion
+     */
     public void setTripulacion(String tripulacion) {
         this.tripulacion = tripulacion;
     }
 
+    /**
+     *
+     * @return
+     */
     public int getNumeroRuedas() {
         return numeroRuedas;
     }
 
+    /**
+     *
+     * @param numeroRuedas
+     */
     public void setNumeroRuedas(int numeroRuedas) {
         this.numeroRuedas = numeroRuedas;
     }
 
+    /**
+     *
+     * @return
+     */
     public Date getFechaMatricula() {
         return fechaMatricula;
     }
 
+    /**
+     *
+     * @param fechaMatricula
+     */
     public void setFechaMatricula(Date fechaMatricula) {
         this.fechaMatricula = fechaMatricula;
     }
@@ -196,9 +271,18 @@ public class Vehiculo {
         return medioDesplazamientos;
     }
 
+    /**
+     *
+     * @param medioDesplazamientos
+     */
     public void setMedioDesplazamientos(String medioDesplazamientos) {
         this.medioDesplazamientos = medioDesplazamientos;
     }
+
+    /**
+     * metodo to string permite concatenar vairiables para mostrar con mayor facilidad
+     * @return
+     */
     @Override
     public String toString() {
         return "numeroPasajeros: " +
